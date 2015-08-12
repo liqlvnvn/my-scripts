@@ -1,2 +1,6 @@
 # emacs
 # установить linum+ (просто скачать файл)
+
+# python
+sudo apt-get install pip3
+sudo pip3 install virtualenv
