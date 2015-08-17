@@ -2,3 +2,4 @@
 cd ~
 git pull https://github.com/liqlvnvn/settings
 vim +PluginInstall +qall
+vim +PluginClean +qall
