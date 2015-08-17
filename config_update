@@ -1,3 +1,4 @@
 #! /usr/bin/fish
 cd ~
 git pull https://github.com/liqlvnvn/settings
+vim +PluginInstall +qall
