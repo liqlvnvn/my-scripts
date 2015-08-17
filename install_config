@@ -8,3 +8,6 @@ sudo pip3 install virtualenv
 # haskell
 # stack 
 # https://github.com/commercialhaskell/stack/wiki/Downloads
+
+# ctags for vim
+sudo apt-get install ctags
