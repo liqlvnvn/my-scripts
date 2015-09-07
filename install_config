@@ -1,3 +1,5 @@
+sudo apt-get install ssh tightvncserver tightvncviewer
+
 sudo apt-get install fish
 chsh -s /usr/bin/fish
 
