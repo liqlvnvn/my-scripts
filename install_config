@@ -1,3 +1,5 @@
+sudo chmod -x /usr/lib/x86_64-linux-gnu/hud/hud-service
+
 sudo apt-get install ssh tightvncserver tightvncviewer
 
 sudo apt-get install fish
