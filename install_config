@@ -1,20 +1,37 @@
 sudo chmod -x /usr/lib/x86_64-linux-gnu/hud/hud-service
 
-sudo apt-get install ssh tightvncserver tightvncviewer
+sudo apt-get install -y git
+cd Document
+git clone https://github.com/liqlvnvn/my-scripts/
 
-sudo apt-get install fish
+cd ~
+git init 
+git remote add origin https://github.com/liqlvnvn/settings
+git fetch --all
+git reset --hard origin/master
+
+sudo apt-get install -y vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+
+# sudo apt-get install ssh tightvncserver tightvncviewer
+
+sudo apt-get install -y fish
 chsh -s /usr/bin/fish
 
 # emacs
 # установить linum+ (просто скачать файл)
 
 # python
-sudo apt-get install pip3
+sudo apt-get install -y pip3
 sudo pip3 install virtualenv
 
 # haskell
 # stack 
 # https://github.com/commercialhaskell/stack/wiki/Downloads
+sudo apt-get install -y haskell-stack
+stack setup
+stack install hlint hasktags hoogle
 
 # ctags for vim
-sudo apt-get install ctags
+# sudo apt-get install ctags
