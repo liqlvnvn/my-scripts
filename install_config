@@ -30,6 +30,7 @@ sudo pip3 install virtualenv
 # stack 
 # https://github.com/commercialhaskell/stack/wiki/Downloads
 sudo apt-get install -y haskell-stack
+sudo apt-get install libghc-zlib-dev  libghc-zlib-bindings-dev
 stack setup
 stack install hlint hasktags hoogle
 
