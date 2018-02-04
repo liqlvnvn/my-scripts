@@ -1,7 +1,8 @@
-sudo chmod -x /usr/lib/x86_64-linux-gnu/hud/hud-service
+# Ubuntu fix
+#sudo chmod -x /usr/lib/x86_64-linux-gnu/hud/hud-service
 
 sudo apt-get install -y git
-cd Document
+cd Documents
 git clone https://github.com/liqlvnvn/my-scripts/
 
 cd ~
@@ -10,12 +11,14 @@ git remote add origin https://github.com/liqlvnvn/settings
 git fetch --all
 git reset --hard origin/master
 
+# Vim
 sudo apt-get install -y vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
-# sudo apt-get install ssh tightvncserver tightvncviewer
 
+# sudo apt-get install ssh tightvncserver tightvncviewer
+sudo apt-get install -y xfce4-terminal
 sudo apt-get install -y fish
 chsh -s /usr/bin/fish
 
@@ -26,11 +29,17 @@ chsh -s /usr/bin/fish
 sudo apt-get install -y pip3
 sudo pip3 install virtualenv
 
+# Fixing PATH for stack
+PATH=$PATH:/usr/local/bin:/root/.local/bin
+export PATH
+
 # haskell
 # stack 
 # https://github.com/commercialhaskell/stack/wiki/Downloads
-sudo apt-get install -y haskell-stack
+# sudo apt-get install -y haskell-stack
+# curl -sSL https://get.haskellstack.org/ | sh
 sudo apt-get install libghc-zlib-dev  libghc-zlib-bindings-dev
+stack upgrade
 stack setup
 stack install hlint hasktags hoogle
 

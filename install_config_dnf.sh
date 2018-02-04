@@ -1,4 +1,4 @@
-sudo dnf install -a kernel-devel xfce4-terminal firefox
+sudo dnf install -y kernel-devel xfce4-terminal firefox
 
 #sudo chmod -x /usr/lib/x86_64-linux-gnu/hud/hud-service
 PATH=$PATH:/usr/local/bin:/root/.local/bin
