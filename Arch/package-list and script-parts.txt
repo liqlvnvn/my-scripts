@@ -12,7 +12,7 @@ alsa-utils
 
 nitrogen
 
-ttf-dejavu ttf-liberation xorg-fonts-type1 xorg-fonts-misc noto-fonts noto-fonts-emoji
+ttf-dejavu ttf-liberation xorg-fonts-type1 xorg-fonts-misc noto-fonts noto-fonts-emoji ttf-joypixels
 fc-cache -f
 
 xorg-xbacklight
