@@ -15,6 +15,7 @@ echo "<?xml version=\"1.0\"?>
    <family>sans-serif</family>
    <prefer>
      <family>Noto Sans</family>
+     <family>Joy Pixels</family>
      <family>Noto Color Emoji</family>
      <family>Noto Emoji</family>
      <family>DejaVu Sans</family>
@@ -25,12 +26,20 @@ echo "<?xml version=\"1.0\"?>
    <family>serif</family>
    <prefer>
      <family>Noto Serif</family>
+     <family>Joy Pixels</family>
      <family>Noto Color Emoji</family>
      <family>Noto Emoji</family>
      <family>DejaVu Serif</family>
    </prefer>
  </alias>
-
+<alias>
+		<family>sans</family>
+		<prefer>
+			 <family>Noto Sans</family>
+			 <family>Joy Pixels</family>
+			 <family>Noto Color Emoji</family>
+		</prefer>
+	</alias>
  <alias>
   <family>monospace</family>
   <prefer>
