@@ -1,0 +1,73 @@
+xprop xsel xterm alacritty 
+
+mlocate
+updatedb
+
+sxhkd unzip htop vim
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+pavucontrol xorg xorg-xinit 
+alsa-utils
+
+nitrogen
+
+ttf-dejavu ttf-liberation xorg-fonts-type1 xorg-fonts-misc noto-fonts noto-fonts-emoji
+fc-cache -f
+
+xorg-xbacklight
+openssh
+xclip
+
+xorg xorx xorg-xinit xf86-video-intel xorg-drivers xf86-input-evdev xf86-input-vmmouse xf86-input-synaptics
+
+# For NVIDIA
+acpid 
+sudo systemctl enable acpid
+sudo systemctl start acpid
+
+nvidia-utils nvidia-xconfig nvidia nvidia-libgl xorg-xrandr xorg-server nvidia-settings xf86-video-nouveau
+mesa-demos mesa
+picom
+
+sudo pacman -S bumblebee mesa nvidia xf86-video-intel
+gpasswd -a alex bumblebee
+sudo systemctl enable bumblebeed
+
+# Install Paru
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+paru -S keepassx2 dropbox-cli brave-bin
+
+git clone --bare https://github.com/liqlvnvn/settings
+
+git config --global user.name "liqlvnvn"
+git config --global user.email "liqlvnvn@gmail.com"
+git config --global color.ai auto
+git config --global credential.helper store
+git config --global credential.helper cache
+
+echo "
+[Trigger]
+Operation=Install
+Operation=Upgrade
+Operation=Remove
+Type=Package
+Target=nvidia
+Target=linux
+# Change the linux part above and in the Exec line if a different kernel is used
+
+[Action]
+Description=Update Nvidia module in initcpio
+Depends=mkinitcpio
+When=PostTransaction
+NeedsTargets
+Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /usr/bin/mkinitcpio -P'
+" >> /etc/pacman.d/hooks/nvidia.hook
+
+
+
+
