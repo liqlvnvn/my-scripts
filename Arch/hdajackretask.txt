@@ -1,0 +1,18 @@
+hdajackretask
+Step 2: Open hda-jack-retask
+
+Step 3: Select the IDT 92HD91BXX codec (may be different on other models)
+
+Step 4: Check the "Show unconnected pins" box (the internal speakers do not show as connected)
+
+Step 5: Remap 0x0d (Internal Speaker, Front side) to "Internal speaker"
+
+Step 6: Remap 0x0f ("Not connected" but is the under-display speakers) to "Internal speaker"
+
+Step 7: Remap 0x10 ("Not connected" but is the subwoofer) to "Internal speaker (LFE)"
+
+Step 8: Apply now, then test with your favorite audio program (some may not work due to Pulse reset, so find one that does, verify sound is coming from all speakers).
+
+Step 9: If it works, select "Install boot override" to save the settings to apply at boot time.
+
+Step 10: Reboot. When it comes back, you should have full sound from all speakers. Also test headphones. Plugging in headphones should disable sound from all internal speakers.
