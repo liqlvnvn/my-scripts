@@ -3,6 +3,9 @@ xprop xsel xterm alacritty
 mlocate
 updatedb
 
+
+mpv
+
 sxhkd unzip htop vim
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
